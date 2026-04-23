@@ -1,0 +1,93 @@
+lidar-fuel-ml/
+│
+├── README.md
+├── pyproject.toml
+├── .gitignore
+├── requirements.txt
+├── .env.example
+│
+├── configs/
+│   ├── data.yaml
+│   ├── features.yaml
+│   ├── train_rf.yaml
+│   ├── train_svm.yaml
+│   └── train_nn.yaml
+│
+├── data/
+│   ├── raw/
+│   │   ├── aerial/
+│   │   ├── terrestrial/
+│   │   └── labels/
+│   ├── interim/
+│   ├── processed/
+│   └── sample/
+│
+├── notebooks/
+│   ├── 01_data_exploration.ipynb
+│   ├── 02_feature_sanity_checks.ipynb
+│   └── 03_model_comparison.ipynb
+│
+├── src/
+│   └── lidar_fuel_ml/
+│       ├── __init__.py
+│       ├── paths.py
+│       ├── schemas.py
+│       ├── logging_utils.py
+│       │
+│       ├── ingestion/
+│       │   ├── load_las.py
+│       │   ├── load_labels.py
+│       │   └── build_dataset_index.py
+│       │
+│       ├── preprocessing/
+│       │   ├── normalize_heights.py
+│       │   ├── tile_pointcloud.py
+│       │   ├── clean_points.py
+│       │   └── align_labels.py
+│       │
+│       ├── features/
+│       │   ├── canopy_metrics.py
+│       │   ├── vertical_profile.py
+│       │   ├── voxel_features.py
+│       │   └── build_feature_table.py
+│       │
+│       ├── datasets/
+│       │   ├── split_data.py
+│       │   ├── make_training_set.py
+│       │   └── make_inference_set.py
+│       │
+│       ├── models/
+│       │   ├── train_random_forest.py
+│       │   ├── train_svm.py
+│       │   ├── train_mlp.py
+│       │   ├── predict.py
+│       │   └── evaluate.py
+│       │
+│       ├── pipelines/
+│       │   ├── run_feature_pipeline.py
+│       │   └── run_training_pipeline.py
+│       │
+│       └── visualization/
+│           ├── plot_feature_distributions.py
+│           ├── plot_results.py
+│           └── export_maps.py
+│
+├── tests/
+│   ├── test_ingestion.py
+│   ├── test_feature_table.py
+│   ├── test_splits.py
+│   └── test_train_shapes.py
+│
+├── models/
+│   ├── trained/
+│   └── metadata/
+│
+├── reports/
+│   ├── figures/
+│   ├── tables/
+│   └── paper/
+│
+└── scripts/
+    ├── run_ingestion.py
+    ├── run_features.py
+    └── run_training.py
