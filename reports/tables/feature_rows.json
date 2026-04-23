@@ -1,0 +1,49 @@
+[
+  {
+    "scene_id": "points",
+    "record_id": "plot_1",
+    "target": null,
+    "features": {
+      "num_points": 3690.0,
+      "mean_height": 1.355013550134269e-05,
+      "max_height": 0.03999999999996362,
+      "p95_height": 0.0,
+      "canopy_cover_2m": 0.0,
+      "vertical_bin_0": 1.0,
+      "vertical_bin_1": 0.0,
+      "vertical_bin_2": 0.0,
+      "vertical_bin_3": 0.0,
+      "vertical_bin_4": 0.0,
+      "vertical_bin_5": 0.0,
+      "vertical_bin_6": 0.0,
+      "vertical_bin_7": 0.0,
+      "vertical_bin_8": 0.0,
+      "vertical_bin_9": 0.0,
+      "vertical_bin_10": 0.0,
+      "vertical_bin_11": 0.0,
+      "occupancy_bin_0": 1.0,
+      "occupancy_bin_1": 0.0,
+      "occupancy_bin_2": 0.0,
+      "occupancy_bin_3": 0.0,
+      "occupancy_bin_4": 0.0,
+      "occupancy_bin_5": 0.0,
+      "occupancy_bin_6": 0.0,
+      "occupancy_bin_7": 0.0,
+      "occupancy_bin_8": 0.0,
+      "occupancy_bin_9": 0.0,
+      "occupancy_bin_10": 0.0,
+      "occupancy_bin_11": 0.0,
+      "cbh_proxy_gap": 0.0,
+      "cbh_proxy_sparse_first_bin": 23.5,
+      "cbh_proxy_energy_threshold": 0.0,
+      "cbh_proxy_transition": 3.0
+    },
+    "metadata": {
+      "point_density": 9.231202844567267,
+      "plot_radius": 11.28,
+      "plot_center_x": 572695.017,
+      "plot_center_y": 4979074.055,
+      "plot_area": 399.7312226945195
+    }
+  }
+]

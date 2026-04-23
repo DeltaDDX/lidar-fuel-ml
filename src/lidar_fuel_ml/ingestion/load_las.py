@@ -45,6 +45,17 @@ def load_las(path: Path) -> PointCloud:
     return PointCloud(
         scene_id=path.stem,
         points=tuple(points),
-        crs=str(getattr(las.header, "parse_crs", lambda: None)() or "") or None,
+        crs=_safe_parse_crs(las),
         metadata={"source_path": str(path)},
     )
+
+
+def _safe_parse_crs(las: object) -> str | None:
+    parse_crs = getattr(getattr(las, "header", None), "parse_crs", None)
+    if parse_crs is None:
+        return None
+    try:
+        crs = parse_crs()
+    except Exception:
+        return None
+    return str(crs) if crs else None
